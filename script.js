@@ -19,7 +19,7 @@ let options = {
 
 function sendRequest() {
     $.getJSON(searchURL, options, function(data){
-        console.log(data);
+        searchresultsEl.empty();
         requestLoop(data);
     })
   }
@@ -32,7 +32,7 @@ function sendRequest() {
         var vidDesc = item.snippet.description.substring(0, 200);
         var vidId = item.id.videoId;
 
-        $('#search-results').append(`
+        searchresultsEl.append(`
             <article class="video" data-key"${vidId}">
             <img src="${vidThumb}" class="thumb">
             <div class="info">
