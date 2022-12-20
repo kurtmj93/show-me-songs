@@ -9,7 +9,7 @@ const searchURL = 'https://youtube.googleapis.com/youtube/v3/search'
 
 // YOUTUBE SEARCH API REQUEST OPTIONS
 let options = {
-    q: 'Dua Lipa',
+    q: '',
     part: 'snippet',
     key: youtubeKey,
     maxResults: 10,
@@ -17,8 +17,12 @@ let options = {
     videoCategoryId: 10
 }
 
-function sendRequest() {
+function sendRequest(event) {
+    event.preventDefault();
+    options.q = $('#song').val();
+    console.log(options);
     $.getJSON(searchURL, options, function(data){
+        searchresultsEl.empty();
         console.log(data);
         requestLoop(data);
     })
@@ -32,11 +36,12 @@ function sendRequest() {
         var vidDesc = item.snippet.description.substring(0, 200);
         var vidId = item.id.videoId;
 
-        $('#search-results').append(`
-            <article class="video" data-key"${vidId}">
+        searchresultsEl.append(`
+            <article class="video" data-key="${vidId}">
+            <a href="https://www.youtube.com/watch?v=${vidId}">
             <img src="${vidThumb}" class="thumb">
             <div class="info">
-            <h3>${vidTitle}</h3>
+            <h3>${vidTitle}</h3></a>
             <p>${vidDesc}</p>
             </div>
             </article>
@@ -44,5 +49,5 @@ function sendRequest() {
     });
   }
 
-  $('#show').click(sendRequest);
+  $('#songtitle').submit(sendRequest);
 
