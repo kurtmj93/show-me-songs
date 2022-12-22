@@ -15,11 +15,9 @@
       <h1>Show Me Songs</h1>
       <p class="text-sm leading-5 text-white">A Collaboration by Josh Daniel, Kurt Jensen and Elizabeth Lopez-Lopez</p>
     </header>
-    
-<!-- main section -->
-    <main >
+
       <!-- top info -->
-      <section id="top" class="pt-5 pb-5 bg-white overflow-hidden">
+      <section id="top" class="m-5 pt-5 pb-5">
         <div class="container px-4 mx-auto">
           <h2 class="mb-28 text-6xl md:text-7xl font-bold font-heading tracking-px-n leading-tight md:max-w-lg">We make making playlists easy</h2>
           <div class="flex flex-wrap -m-8">
@@ -29,7 +27,7 @@
                   <div class="relative w-14 h-14 text-2xl font-bold font-heading bg-indigo-100 rounded-full">
                     <span class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">1</span>
                   </div>
-          </div>
+        </div>
                     <div class="flex-1 p-2">
                       <div class="w-full h-px bg-gray-200"></div>
                     </div>
@@ -61,59 +59,48 @@
                     </div>
                   </div>
                   <h3 class="text-xl font-semibold leading-normal md:max-w-xs">Checkout the playlist created with your lyrics!</h3>
-                </div>
-              </div>
             </div>
           </section>
 
-
-<!-- search bar -->
-
-        <section id="search-bar">
-            <div class="w-full md:w-1/2 p-8">
-                <div class="p-2 py-4 flex flex-col justify-center bg-blueGray-100 h-full">
-                  <label class="block mb-4">
-                      <p class="mb-2 text-gray-900 font-semibold leading-normal">Lyrics</p> 
-                    </label>
-                    <form id="songtitle" class="md:max-w-lg mx-auto" name="songtitle">
-                      <input type="text" class="search px-4 py-3.5 w-full text-gray-400 font-medium placeholder-gray-400 bg-white outline-none border border-gray-300 rounded-lg focus:ring focus:ring-indigo-300" id="song" name="song" placeholder="ex. show me songs about the south land">
-                      <input type="submit" id="show" value="Submit" class="mb-9 py-4 px-9 w-full text-white font-semibold border border-indigo-700 rounded-xl shadow-4xl focus:ring focus:ring-indigo-300 bg-indigo-600 hover:bg-indigo-700 transition ease-in-out duration-200">
-                    </form>
-                    </div>
-
-<!-- Search results -->
-        <section>
+<!-- main section -->
+    <main class="flex-row justify-space-between">
+      <!-- search bar -->
+      <section id="search-bar">
+        <div class="w-full bg-purple-100 rounded-xl">
+          <div class="p-2 py-4 flex flex-col justify-space-between bg-blueGray-100 h-full">
+            <label class="block mb-4">
+              <p class="mb-2 text-gray-900 font-semibold leading-normal">Lyrics Search</p> 
+            </label>
+            <form id="songtitle" class="mx-5 md:max-w-lg" name="songtitle">
+              <!-- if want form in center add mx:auto before md ^ -->
+              <input type="text" class="search mb-4 py-4 px-9 w-full text-gray-400 font-medium placeholder-gray-400 bg-white outline-none border border-gray-300 rounded-lg focus:ring focus:ring-indigo-300" id="song" name="song" placeholder="ex. show me songs about the south land">
+              <input type="submit" id="show" value="Submit" class="mb-9 py-4 px-9 w-full text-white font-semibold border border-indigo-700 rounded-xl shadow-4xl focus:ring focus:ring-indigo-300 bg-indigo-600 hover:bg-indigo-700 transition ease-in-out duration-200">
+            </form>
+            <!-- search bar -->
             <div class="container px-4 mx-auto">
-                <div class="pt-6 pb-8 bg-gray-500 rounded-xl">
-                  <div class="px-6">
-                    <h4 class="text-lg text-gray-100 font-semibold mb-6">Playlist</h4>
-                    <div class="w-full mt-6 pb-6 overflow-x-auto">
-                      <table class="w-full min-w-max">
-                        <thead>
-                          <tr class="text-left">
-                            <th class="p-0">
-                              <div class="py-3 px-6 rounded-l-xl bg-gray-600">
-                                <span class="text-xs text-gray-300 font-semibold">Song Title</span>
-                              </div>
-                            </th>
-                            <!-- <th class="p-0">
-                              <div class="py-3 px-6 bg-gray-600">
-                                <span class="text-xs text-gray-300 font-semibold">Artist</span>
-                              </div>
-                            </th> -->
-                          </tr>
-                        </thead>
-                        <tbody id="search-results" class="bg-white rounded-lg border border-gray-200 w-96 text-gray-900"></tbody>
+              <div class="pt-6 pb-8 bg-gray-500 rounded-xl">
+                <div class="px-6">
+                  <h4 class="text-lg text-gray-100 font-semibold mb-6">Playlist</h4>
+                  <table class="w-full min-w-max">
+                    <thead>
+                      <tr class="text-left">
+                        <th class="p-0">
+                          <div class="py-3 px-6 rounded-l-xl bg-gray-600">
+                             <span class="text-xs text-gray-300 font-semibold">Song Title</span>
+                        </th>
+                      </tr>
+                    </thead>
+                    <tbody id="search-results" class="bg-white rounded-lg border border-gray-200 w-96 text-gray-900"></tbody>
                               
-                              
-            
-        </section>
+                          </div>
+        </section>    
+       
     </main>
    
 
-
 <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
 <script src="script.js"></script>
+<script type="text/javascript" src="http://tracking.musixmatch.com/t1.0/AMa6hJCIEzn1v8RuOP"></script>
 </body>
 </html>
 
