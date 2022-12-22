@@ -33,10 +33,11 @@ h1 {
 
 
 main {
+    margin: 20px auto;
+    width: 94%;
+  }
 
-}
-
-@media screen and (min-width: 1200px) {
+/* @media screen and (min-width: 1200px) {
 
 }
 @media screen and (min-width: 992px) {
@@ -44,4 +45,4 @@ main {
 }
 @media screen and (min-width: 768px) {
     
-}
+} */

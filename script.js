@@ -64,3 +64,9 @@ $.ajax({
     console.log('Ajax Reponse \n-------------');
     console.log(response);
   });
+
+  //proof of concept
+  //implement to run at the same time as the youtube api?
+  //can be simple, doesnt need to be so hard
+  //proof on concept that we can get data back and do something with the data
+  //
