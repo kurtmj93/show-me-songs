@@ -55,6 +55,9 @@ function sendRequest(event) {
 
   $('#songtitle').submit(sendRequest);
 
+  // MusixMatch API Constants
+const musixMatchKey = '4bf14d6e04db8041bfd1bcad66b37a84'
+const getURL = 'https://api.musixmatch.com/ws/1.1/'
 
 // MusixMatch lyrics search
 $.ajax({
