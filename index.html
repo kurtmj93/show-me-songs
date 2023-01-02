@@ -19,7 +19,7 @@
       <!-- top info -->
       <section id="top" class="m-5 pt-5 pb-5">
         <div class="container px-4 mx-auto">
-          <h2 class="mb-28 text-6xl md:text-7xl font-bold font-heading tracking-px-n leading-tight md:max-w-lg">We make making playlists easy</h2>
+          <h2 class="mb-28 text-6xl md:text-7xl font-bold font-heading tracking-px-n leading-tight md:max-w-lg">Show Me Songs About...</h2>
           <div class="flex flex-wrap -m-8">
             <div class="w-full md:w-1/2 lg:w-1/4 p-8">
               <div class="flex flex-wrap items-center mb-7 -m-2">
@@ -69,18 +69,18 @@
         <div class="w-full bg-purple-100 rounded-xl">
           <div class="p-2 py-4 flex flex-col justify-space-between bg-blueGray-100 h-full">
             <label class="block mb-4">
-              <p class="p-2 mb-2 text-gray-900 font-semibold leading-normal">Lyrics Search</p> 
+              <p class="p-2 mb-2 text-gray-900 font-semibold leading-normal">Show Me Songs About ...</p> 
             </label>
-            <form id="songtitle" class="mx-5 md:max-w-lg" name="songtitle">
+            <form id="songlyrics" class="mx-5 md:max-w-lg" name="songlyrics">
               <!-- if want form in center add mx:auto before md ^ -->
-              <input type="text" class="search mb-4 py-4 px-9 w-full text-gray-400 font-medium placeholder-gray-400 bg-white outline-none border border-gray-300 rounded-lg focus:ring focus:ring-indigo-300" id="song" name="song" placeholder="ex. show me songs about the south land">
+              <input type="text" class="search mb-4 py-4 px-9 w-full text-gray-400 font-medium placeholder-gray-400 bg-white outline-none border border-gray-300 rounded-lg focus:ring focus:ring-indigo-300" id="lyrics" name="lyrics" placeholder="ex. daisies">
               <input type="submit" id="show" value="Submit" class="mb-9 py-4 px-9 w-full text-white font-semibold border border-indigo-700 rounded-xl shadow-4xl focus:ring focus:ring-indigo-300 bg-indigo-600 hover:bg-indigo-700 transition ease-in-out duration-200">
             </form>
             <!-- search results -->
             <div class="container px-4 mx-auto ">
               <div class="pt-6 pb-8 bg-gray-500 rounded-xl">
                 <div class="px-6">
-                  <h4 class="text-lg text-gray-100 font-semibold mb-6">Playlist</h4>
+                  <h4 class="text-lg text-gray-100 font-semibold mb-6">SONGS ABOUT <span id="playlistname">...</span></h4>
                   <table class="w-full min-w-max">
                     <thead>
                       <tr class="text-left">
