@@ -16,10 +16,12 @@ let options = {
     q: '',
     part: 'snippet',
     key: youtubeKey,
-    maxResults: 10,
+    maxResults: 1,
     type: 'video',
     videoCategoryId: 10
 }
+
+/*
 
 function sendRequest(event) {
     event.preventDefault();
@@ -53,35 +55,27 @@ function sendRequest(event) {
     });
   }
 
-  $('#songtitle').submit(sendRequest);
+*/
 
-  // MusixMatch API Constants
-const musixMatchKey = '4bf14d6e04db8041bfd1bcad66b37a84'
-const getURL = 'https://api.musixmatch.com/ws/1.1/'
+// Lyrics Search Fetch URL
 
-// MusixMatch lyrics search
-$.ajax({
-    url: getURL,
-    key: musixMatchKey,
-    method: 'GET',
-    q_lyrics: '',
-  }).then(function (response) {
-    console.log('Ajax Reponse \n-------------');
-    console.log(response);
+const chartLyricsURL = 'http://api.chartlyrics.com/apiv1.asmx/SearchLyricText?lyricText=';
+
+function sendRequest(event) {
+  event.preventDefault();
+  var searchVal = encodeURIComponent($('#song').val());
+  var searchFetch = chartLyricsURL + searchVal;
+  var playlist = [];
+  $.ajax({
+    url: searchFetch,
+    dataType: "xml",
+    success: function(xml) {
+      $('SearchLyricResult', xml).each(function(){
+        var songResult = $('Song', this).text() + " by " + $('Artist', this).text();
+        playlist.push(songResult);
+      })
+    },
   });
+};
 
-// Search bar event listener
-
-var searcher = document.querySelector('#search-bar')
-
-  searcher.addEventListener('submit', function() {
-    event.preventDefault();
-    searchValue =searcher.value;
-});
-
-async function searchSong(searchValue){
-    const searchResult = await fetch(`${url}/suggest/${sea}`)
-    const data = await searchResult.json();
-    
-    showData(data)
-}
+$('#songtitle').submit(sendRequest);
