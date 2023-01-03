@@ -21,7 +21,7 @@ var optionsYT = {
 };
 
 // Chart Lyrics API Fetch URL - no key necessary
-const chartLyricsURL = 'http://api.chartlyrics.com/apiv1.asmx/SearchLyricText?lyricText=';
+const chartLyricsURL = 'https://api.chartlyrics.com/apiv1.asmx/SearchLyricText?lyricText=';
 
 function sendRequest(event) {
   event.preventDefault();
@@ -59,12 +59,13 @@ function showPlaylist() {
       $.getJSON(searchURL, optionsYT, function(data){
           var vidThumb = data.items[0].snippet.thumbnails.medium.url;
           var vidId = data.items[0].id.videoId;
+          var vidTitle = data.items[0].snippet.title;
           searchresultsEl.append(`
               <article class="video" data-key="${vidId}">
               <a href="https://www.youtube.com/watch?v=${vidId}">
               <img src="${vidThumb}" class="thumb">
               <div class="info">
-              <h3>${optionsYT.q}</h3></a>
+              <h3>${vidTitle}</h3></a>
               </div>
               </article>
           `);});
