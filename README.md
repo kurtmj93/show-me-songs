@@ -6,14 +6,15 @@ In todays world many APIs exist. Our team wanted to take two APIs and merge them
 
 ## Installation
 
-There is no installation necessary, and you can access our site at: 
+There is no installation necessary, and you can access our site at: https://kurtmj93.github.io/show-me-songs/
 
 ## Usage
 
-The [website](https:/..) created allows you to search some lyrics and then creates a playlist with your key lyrics! ![Web1](./assets/images/web1.PNG)
+The [website](https://kurtmj93.github.io/show-me-songs/) created allows access our application and find your own playlist based off your lyrics search ![Web1](./images/Web1.PNG)
 
+You can also scroll down on the webpage to view your created playlsit ![Web2](./images/Web2.PNG)
 
- ![web2](./assets/images/web2.PNG)
+You can look through the GitHub [repo](https://kurtmj93.github.io/show-me-songs/) to view how our the application was created. 
 
 ## Credits
 
