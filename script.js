@@ -54,7 +54,7 @@ function showPlaylist() {
   if (localStorage.getItem('playlist') !== null) {
     $('#playlistname').text(localStorage.getItem('name'));
     playlist = JSON.parse(localStorage.getItem('playlist'));
-    for (i=0; i<5; i++) {
+    for (i=0; i<3; i++) {
       optionsYT.q = playlist[i];
       $.getJSON(searchURL, optionsYT, function(data){
           var vidThumb = data.items[0].snippet.thumbnails.medium.url;
